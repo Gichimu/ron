@@ -1,0 +1,27 @@
+<div class="header">
+  <div class="logo">
+    <h5>The Logo</h5>
+  </div>
+  <ul class="menu">
+    <li>about</li>
+    <li>projects</li>
+    <li>Get involved</li>
+    <li>contacts</li>
+  </ul>
+  <span class="links">
+    <i class="fas fa-search"></i>
+    <mat-divider [vertical]="true"></mat-divider>
+    <i class="fab fa-facebook-f"></i>
+    <i class="fab fa-youtube"></i>
+    <i class="fab fa-instagram"></i>
+  </span>
+  <div class="burger" (click)="toggleMenu()">
+    <div *ngIf="toggle else: elseblock">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+    <ng-template #elseblock></ng-template>
+
+  </div>
+</div>
