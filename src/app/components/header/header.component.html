@@ -2,12 +2,15 @@
   <div class="logo">
     <h5>The Logo</h5>
   </div>
-  <ul class="menu">
-    <li>about</li>
-    <li>projects</li>
-    <li>Get involved</li>
-    <li>contacts</li>
-  </ul>
+  <mat-list
+    role="list"
+    [ngClass]="toggle && isMobile ? 'toggle hideMenu text-center' : 'menu'"
+  >
+    <mat-list-item>about</mat-list-item>
+    <mat-list-item>projects</mat-list-item>
+    <mat-list-item>Get involved</mat-list-item>
+    <mat-list-item>contacts</mat-list-item>
+  </mat-list>
   <span class="links">
     <i class="fas fa-search"></i>
     <mat-divider [vertical]="true"></mat-divider>
@@ -15,13 +18,13 @@
     <i class="fab fa-youtube"></i>
     <i class="fab fa-instagram"></i>
   </span>
-  <div class="burger" (click)="toggleMenu()">
-    <div *ngIf="toggle else: elseblock">
-      <div class="line1"></div>
-      <div class="line2"></div>
-      <div class="line3"></div>
-    </div>
-    <ng-template #elseblock></ng-template>
-
-  </div>
+  <button
+    mat-icon-button
+    color="warn"
+    class="burger"
+    (click)="toggleMenu()"
+    aria-label="Example icon button with a menu icon"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
 </div>
