@@ -1,13 +1,24 @@
+.landing-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel {
+  position: relative;
+  display: block;
+}
 .carousel-inner {
-  max-height: 50vh;
+  max-height: 70vh;
 }
 
 .example-card {
-    border-radius: 10px;
+  border-radius: 10px;
   margin: 0 auto;
   width: 150px;
   width: 30vw;
   top: -18vh;
+  background: rgb(253, 250, 250);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,8 +26,38 @@
   z-index: 1;
 }
 
+.carousel::after {
+  content: " ";
+  background-image: url(../../../assets/bg/vintage-wallpaper.png);
+  position: absolute;
+  width: 100vw;
+  bottom: 0;
+  height: 14vh;
+  opacity: .7;
+}
+
+.action-bar {
+  background-color: rgb(55, 102, 133);
+  bottom: -2vh;
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  color: white;
+  height: 50px;
+}
+
+.action-bar h4 {
+  margin-left: 30vw;
+  text-transform: uppercase;
+}
+
+
+
 @media screen and (max-width: 768) {
   .carousel-item {
     max-height: 10vh;
+  }
+  .example-card {
+    white-space: nowrap;
   }
 }
